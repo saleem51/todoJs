@@ -1,0 +1,51 @@
+h1 {
+    color: blue;
+}
+
+.todo-bloc{
+    border: 1px solid #000;
+    width: 50%;
+    height: 200px;
+}
+
+
+
+.todo-sous-bloc{
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-lab {
+    text-align: center;
+}
+
+.todo-champs{
+    margin-top : 2%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn{
+    color: #FFF;
+    margin-top: 5%;
+}
+
+.btn-add{
+    background-color: green;
+}
+
+.btn-delete{
+    background-color: red;
+}
+
+.todo-insert{
+    display: flex;
+    flex-direction: row;
+ 
+}
