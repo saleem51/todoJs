@@ -1,51 +1,64 @@
 h1 {
-    color: blue;
+  color: blue;
 }
 
-.todo-bloc{
-    border: 1px solid #000;
-    width: 50%;
-    height: 200px;
+.todo-bloc {
+  border: 1px solid #000;
+  width: 50%;
 }
 
-
-
-.todo-sous-bloc{
-    display: flex;
-    flex-direction: column;
+.todo-sous-bloc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .todo-lab {
-    text-align: center;
+  text-align: center;
 }
 
-.todo-champs{
-    margin-top : 2%;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+.todo-champs {
+  margin-top: 2%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.buttons{
-    margin-left: auto;
-    margin-right: auto;
+.buttons {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.btn{
-    color: #FFF;
-    margin-top: 5%;
+.btn {
+  color: #FFF;
+  margin-top: 5%;
 }
 
-.btn-add{
-    background-color: green;
+.btn-add {
+  background-color: green;
 }
 
-.btn-delete{
-    background-color: red;
+.btn-delete {
+  background-color: red;
 }
 
-.todo-insert{
-    display: flex;
-    flex-direction: row;
- 
+.todo-insert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
+
+.none {
+  display: none;
+}
+
+.imc-btn {
+  background-color: blue;
+  color: #FFF;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=style.css.map */

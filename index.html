@@ -11,7 +11,7 @@
 <body>
     <h1>VanillaJS</h1>
     <h2>Todo List</h2>
-    <div class="todo-bloc">
+    <div class="todo-bloc" id="container" style="height: 200px;">
         <div class="todo-sous-bloc" id="td-sous-bl">
             <label for="todo" class="todo-lab">Insérer un élément à la liste</label>
             <input type="text" class="todo-champs" id="todo">
@@ -19,6 +19,26 @@
                 <button class="btn btn-add" id="add-button">Ajouter</button>
             </div>
         </div>
+    </div>
+    <div class="convert">
+        <h2>Calcul du pourcentage</h2>
+        <label for="val1">Valeur de départ</label><br>
+        <input type="text" class="valeur-dep" id="val1"><br>
+        <label for="val2">Pourcentage</label><br>
+        <input type="text" class="valeur-conver" id="val2">%<br>
+        <label for="val4">Résultat</label><br>
+        <div class="input" id="val4"></div><br>
+        <label for="val3">Diminution</label><br>
+        <div class="input" id="val3"></div><br>
+    </div>
+    <div class="imc">
+        <h2>Calculer votre IMC</h2>
+        <label for="taille">Entrer votre taille</label><br>
+        <input type="text" class="taille" id="taille">m<br>
+        <label for="poids">Poids</label><br>
+        <input type="text" class="poidsr" id="poids">kg<br>
+        <button class="imc-btn" id="imc-submit">Calculer votre IMC</button>
+        <div id="imc-result"></div>
     </div>
     <script defer src="/main.js"></script>
 </body>
