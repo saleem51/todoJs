@@ -42,6 +42,7 @@ addButton.addEventListener( 'click', (event) => {
     
     buttonDelete.classList.add('btn', 'btn-delete');
     liCreate.insertAdjacentElement("afterend", buttonDelete);
+    
 
     buttonDelete.addEventListener('click', () => {
         liCreate.remove();
@@ -101,3 +102,52 @@ submitButton.addEventListener('click', ()=>{
 })
 
 
+// Convertisseur de monnaie
+
+const convertButton = document.getElementById('convertir');
+let montant = document.getElementById('montant-euros');
+let monnaieContainer = document.getElementById('monnaie-block')
+
+let montantAConvertir = montant.value;
+
+let changeMonnaie = [
+    {
+        pays : "états-unis",
+        monnaie: "dollars",
+        taux : 1.1008,
+        signe : '$'
+    },
+    {
+        pays : "algérie",
+        monnaie: "dinars algérien",
+        taux : 157.79,
+        signe : 'Da'
+
+    },{
+        pays : "Maroc",
+        monnaie: "dirham marocain",
+        taux : 10.81,
+        signe : 'dir'
+    }, {
+        pays : "Chine",
+        monnaie: "yuan",
+        taux : 7.04,
+        signe : "Yn"
+    }
+];
+
+convertButton.addEventListener('click', () => {
+    console.log(montant.value);
+   
+    for (const v in changeMonnaie) {
+        console.log(changeMonnaie[v].pays);
+        console.log(changeMonnaie[v].taux);
+        console.log(changeMonnaie[v].monnaie);
+         let resultatConvertion = montant.value * changeMonnaie[v].taux;
+         console.log(resultatConvertion);
+         console.log(`${resultatConvertion} ${changeMonnaie[v].signe}`);
+    }
+
+})
+
+// 

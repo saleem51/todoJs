@@ -61,4 +61,16 @@ h1 {
   color: #FFF;
   margin-top: 10px;
 }
+
+.monnaie-container {
+  height: 600px;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+.monnaie {
+  width: 100%;
+  height: 50px;
+  border: 1px #000;
+}
 /*# sourceMappingURL=style.css.map */
