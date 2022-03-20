@@ -73,4 +73,9 @@ h1 {
   height: 50px;
   border: 1px #000;
 }
+
+.botflag {
+  position: relative;
+  bottom: 25px;
+}
 /*# sourceMappingURL=style.css.map */

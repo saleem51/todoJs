@@ -60,9 +60,7 @@ addButton.addEventListener( 'click', (event) => {
                 console.log(container.style.height);
             }
         }
-        
     })
-
 })
 
 //calcul du pourcentage
@@ -112,42 +110,103 @@ let montantAConvertir = montant.value;
 
 let changeMonnaie = [
     {
-        pays : "états-unis",
+        pays : "États-unis:",
         monnaie: "dollars",
         taux : 1.1008,
-        signe : '$'
+        signe : '$',
+        flg : 'us'
     },
     {
-        pays : "algérie",
+        pays : "Algérie:",
         monnaie: "dinars algérien",
         taux : 157.79,
-        signe : 'Da'
+        signe : 'Da',
+        flg : 'dz'
 
     },{
-        pays : "Maroc",
+        pays : "Maroc:",
         monnaie: "dirham marocain",
         taux : 10.81,
-        signe : 'dir'
+        signe : 'dir',
+        flg : 'ma'
     }, {
-        pays : "Chine",
+        pays : "Chine:",
         monnaie: "yuan",
         taux : 7.04,
-        signe : "Yn"
+        signe : "Yn",
+        flg : 'cn'
     }
 ];
+let flags = ['us', 'dz','ma','cn'];
 
 convertButton.addEventListener('click', () => {
-    console.log(montant.value);
+    // console.log(montant.value);
+    let monnaieUl = document.createElement('ul');
+    monnaieUl.classList.add('f32');
+    let liMonnaie;
+    let v;
    
-    for (const v in changeMonnaie) {
-        console.log(changeMonnaie[v].pays);
-        console.log(changeMonnaie[v].taux);
-        console.log(changeMonnaie[v].monnaie);
-         let resultatConvertion = montant.value * changeMonnaie[v].taux;
-         console.log(resultatConvertion);
-         console.log(`${resultatConvertion} ${changeMonnaie[v].signe}`);
-    }
+    for ( v in changeMonnaie) {
+        // console.log(changeMonnaie[v].pays);
+        // console.log(changeMonnaie[v].taux);
+        // console.log(changeMonnaie[v].monnaie);
+        let resultatConvertion = montant.value * changeMonnaie[v].taux;
+        // console.log(resultatConvertion);
+        // console.log(`${resultatConvertion} ${changeMonnaie[v].signe}`);
+        let arrondi = Math.round(resultatConvertion);
+        let  tauxMonnaie = document.createElement('div');
+        liMonnaie = document.createElement('li');
 
+        monnaieUl.insertAdjacentElement('afterbegin',liMonnaie);  
+        tauxMonnaie.insertAdjacentElement('afterbegin', monnaieUl);
+        let pFlag = document.createElement('p');
+        
+        
+        liMonnaie.innerHTML+= `${changeMonnaie[v].pays}`;
+        liMonnaie.innerHTML +=`<p class="flag ${changeMonnaie[v].flg} botflag"></p>`;
+        liMonnaie.innerHTML += `<br> Taux : ${changeMonnaie[v].taux}` ;
+        liMonnaie.innerHTML += `<br> Monnaie : ${changeMonnaie[v].monnaie}`;
+        liMonnaie.innerHTML += `<br> Résultat : ${arrondi} ${changeMonnaie[v].signe}`;
+        bodyDOc.insertAdjacentElement('beforeend',tauxMonnaie );
+    };   
 })
 
-// 
+// compte à rebours
+
+// const delai = 5;
+
+// let times = delai * 60;
+//  let chrono;
+
+// let inter = setInterval(() => {
+//     const minutes = Math.floor(times / 60);
+
+//     let secondes = times % 60;
+
+//     if (secondes < 10 ) {
+//         secondes = `0${secondes}`
+//     }
+
+//     if (times <= 0){
+//         times = 0;
+//     }else {
+//         times = times - 1
+//     }
+//     chrono = `${minutes} :${secondes}`;
+//     console.log(chrono)
+//     if(minutes <= 0 && secondes <= 0){
+//         clearInterval(inter);
+//     }
+// }, 1000);
+
+
+
+// const rebours = document.createElement('div');
+
+// bodyDOc.insertAdjacentElement('beforeend', rebours);
+
+// inter = "";
+
+// clearInterval();
+//
+
